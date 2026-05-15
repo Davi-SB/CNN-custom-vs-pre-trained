@@ -1,0 +1,24 @@
+### Estudo de Ablação
+Um estudo de ablação é um método de pesquisa em IA/aprendizado de máquina que remove ou desativa sistematicamente componentes (características, camadas ou módulos) de um modelo para medir sua contribuição individual para o desempenho final. Ele ajuda a identificar componentes necessários, reduz a complexidade do modelo e valida se melhorias específicas realmente aprimoram os resultados, garantindo uma "degradação gradual". O termo tem raízes na neuropsicologia, referindo-se à remoção de partes do cérebro para entender suas funções. No contexto de IA, é o processo de "remover" ou desativar sistematicamente partes de um modelo treinado para observar como essa exclusão afeta o resultado final. Os estudos de ablação garantem que o modelo não está apenas "decorando" os dados, mas sim que cada parte dele está contribuindo ativamente para a aprendizagem. São essenciais para justificar escolhas arquiteturais em artigos científicos e projetos de engenharia
+
+### Principais Objetivos
+Identificar Importância: Determinar quais partes do modelo são cruciais e quais são irrelevantes.
+Explicar Causalidade: Investigar se uma melhoria no desempenho se deve realmente a um novo componente proposto ou a outros fatores.
+Simplificar Modelos: Ajudar a remover componentes desnecessários para reduzir a complexidade e o tempo de treinamento.
+Entender falhas: Investigar o impacto de cada componente nos resultados de falha do sistema
+
+### Exemplos Comuns
+Redes Neurais (Deep Learning): Remover camadas específicas (ex: camadas de dropout ou camadas ocultas) em redes convolucionais profundas.
+Arquitetura LSTM: Remover portas de esquecimento (forget gates) ou atualização para medir o impacto na capacidade da rede de gerenciar informações.
+Detecção de Objetos: Remover o módulo de localização para verificar o quanto ele contribui para a precisão geral, mantendo o extrator de características intacto.
+Feature Engineering: Remover características (variáveis) de entrada específicas para avaliar a importância de cada dado na predição
+Com a CNN feita na APS anterior, escolha um componente que você considera essencial no seu modelo e realize um estudo de ablação com ele. Este componente pode ser um procedimento como a regularização empregada, ou seja, você pode estudar a influência de uma técnica de  regularização específica no desempenho de sua CNN ligando e desligando esta técnica. Você também pode escolher componentes da CNN como camadas específicas, testando se a sua presença/ausência impacta no seu desempenho preditivo. Use o mesmo conjunto de dados e as mesmas métricas usadas na APS anterior. 
+
+O que você deve me dar como resultados dessa atividade:
+Documento com o estudo de ablação da CNN que você implementou, seguindo o mesmo padrão do documento criado anteriormente para a task passada. Ele deve responder às seguintes perguntas:
+- Qual o componente escolhido para o estudo?
+- Quais os resultados com e sem este componente?
+- Qual sua opinião sobre o impacto da presença deste componente?
+código-fonte das CNNs e do estudo de ablação.
+
+DESAFIO: Criar gráficos que mostrem a influência do componente escolhido no desempenho da CNN.
